@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta maillots</title>
+</head>
+
+<body>
+<div>
+	<header>
+		<h1>Velvel Maillots</h1>
+	</header>
+	<main>				
+	<ul>
+		<li><a href="index.php">Inicio</a></li>
+		<li><a href="add.html">Alta</a></li>
+	</ul>
+	<h2>Alta maillots</h2>
+<!--FORMULARIO DE ALTA. Al hacer click en el botón Agregar, llama a la página: add.php (form action="add.php")
+La página: add.php se encargará de proceder a la inserción del registro en la tabla de empleados
+-->
+
+	<form action="add_action.php" method="post">
+		<div>
+			<label for="nombre">Nombre</label>
+			<input type="text" name="nombre" id="nombre" placeholder="nombre" required>
+		</div>
+		<div>
+			<label for="categoria">Categoria</label>
+			<select name="categoria" id="categoria" placeholder="categoria" required>
+				<option value="" disabled selected>Seleccione una categoria</option>
+				<option value="Gimnasia">Gimnasia Ritmica</option>
+				<option value="Patinaje">Patinaje</option>
+				<option value="Acrobatica">Acrobática</option>
+			</select>	
+		</div>
+		<div>
+			<label for="talla">Talla</label>
+			<select name="talla" id="talla" placeholder="talla" required>
+				<option value="" disabled selected>Seleccione una categoria</option>
+				<option value="XS">XS</option>
+				<option value="S">S</option>
+				<option value="M">M</option>
+				<option value="L">L</option>
+				<option value="XL">XL</option>
+			</select>	
+		</div>
+		<div>
+			<label for="precio">Precio</label>
+			<input type="number" name="precio" id="precio" placeholder="precio" required>
+		</div>
+
+		<div>
+			<label for="stock">Stock</label>
+			<input type="number" name="stock" id="stock" placeholder="stock" required>
+		</div>
+		<div>
+			<label for="descripcion">Descripcion</label>
+			<input type="text" name="descripcion" id="descripcion" placeholder="descripcion" required>
+		</div>
+
+		<div>
+			<input type="submit" name="inserta" value="Agregar">
+			<input type="button" value="Cancelar" onclick="location.href='index.php'">
+		</div>
+	</form>
+	
+	</main>	
+	<footer>
+	Created by Laura Alonso &copy; 2025
+  	</footer>
+</div>
+</body>
+</html>
