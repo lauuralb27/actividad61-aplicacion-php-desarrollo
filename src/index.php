@@ -18,7 +18,7 @@ include_once("config.php");
 <body>
 <div>
 	<header>
-		<h1>Velvet Maillots</h1>
+		<h1>Velvet Maillots!!!!!! PRUEBA DEFINITIVA</h1>
 	</header>
 
 	<main>
