@@ -39,11 +39,11 @@ jobs:
 # Construye la imagen
       - name: Construir y etiquetar la imagen (BUILD)
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/lamp-crud-app:latest .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/actividad61-aplicación-crud-php:latest .
 # Sube la imagen a un registro      
       - name: Subir imagen a Docker Hub (PUSH)
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/lamp-crud-app:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/actividad61-aplicación-crud-php:latest
 
 # Otra manera es usar una GitHub Actions que contruye y sube la imagen al registro de Docker Hub
       #- name: Build and push
@@ -74,7 +74,7 @@ jobs:
            key: ${{ secrets.SSH_KEY }}
            port: ${{ secrets.SSH_PORT }}   
            script: |
-               cd environment/aplicacion-crud-php-produccion/
+               cd actividad61-aplicacion-php-produccion
                git pull origin main
                docker compose down
                docker compose pull apache
